@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/fonts/roboto-v27-latin-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto700';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/fonts/roboto-v27-latin-700.woff2) format('woff2');
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 576px){
+  .header__title {
+    display: none;
+  }
+
+  .grid-col-sm-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .grid-col-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFF;
+  color: #827B7B;
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+.wrapper {
+  margin: 2rem auto;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E8D2D2;
+  padding-bottom: 2rem;
+}
+
+.header__logo {
+  width: 8rem;
+  height: 7.5rem;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__cart {
+  width: 4.6rem;
+  height: 3rem;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 40% 1fr 1fr;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.input {
+  background-color: #FFF;
+  color: #827B7B;
+  height: 2.8rem;
+  border: 3px solid #E8D2D2;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 2.6rem;
+}
+
+.input--search {
+  background-image: url(../assets/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 98% center;
+}
+
+.input--select {
+  background-image: url(../assets/images/caret-down.svg);
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  appearance: none;
+  padding-right: 2.2rem;
+}
+
+.card {
+  color: #AE4536;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #F9F2F2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__info {
+  background-color: #F9F2F2;
+  border-radius: 0rem 0rem 1rem 1rem;
+  padding: 1rem 2rem 1.4rem 2rem;
+}
+
+.card__name {
+  font-family: 'Roboto700';
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0rem;
+}
+
+.card__price {
+  font-family: 'Roboto700';
+  font-size: 1.6rem;
+  line-height: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
+.button {
+  font-family: Roboto;
+  font-size: 1.4rem;
+  color: #736D6C;
+  background: #E8D2D2;
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  margin-top: 1.2rem;
+  padding: 0.4rem;
+}
+
+.button:hover, .button:focus {
+  opacity: 0.7;
+}
+
+.card-item {
+  border: 0.2rem solid #F9F2F2;
+  border-radius: 1rem;
+}
+
+.card-item__title {
+  font-family: 'Roboto700';
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #827B7B;
+}
+
+
+.card-item__type {
+  font-family: 'Roboto700';
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #827B7B;
+  text-transform: uppercase;
+}
+
+.card-item__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+  gap: 1rem;
+}
+
+.card-item__name {
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #827B7B;
+}
+
+.card-item__button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+

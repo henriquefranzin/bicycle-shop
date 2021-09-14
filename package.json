@@ -1,0 +1,25 @@
+{
+  "name": "bicycle_shop",
+  "version": "1.0.0",
+  "description": "Bycicle e-commerce",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server src",
+    "api": "json-server --watch src/mocks/api.json"
+  },
+  "keywords": [
+    "bicycle",
+    "ecommerce",
+    "HTML",
+    "CSS",
+    "javascript"
+  ],
+  "author": "jumascioli",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^13.0.1"
+  },
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

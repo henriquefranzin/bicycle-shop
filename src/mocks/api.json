@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+        "id":"1",
+        "name":"Mountain Bike Everest",
+        "image":"./assets/images/products/mountain-bike-everest.png",
+        "price":2250,
+        "category":"bike"
+    },
+    {
+        "id":"2",
+        "name":"Speed Bike Emigrantes",
+        "image":"./assets/images/products/speed-bike-emigrantes.png",
+        "price":5640,
+        "category":"bike"
+    },
+    {
+        "id":"3",
+        "name":"Chinatown Classic Bike",
+        "image":"./assets/images/products/chinatown-classic-bike.png",
+        "price":799.9,
+        "category":"bike"
+    },
+    {
+        "id":"4",
+        "name":"Tyson Gloves",
+        "image":"./assets/images/products/tyson-gloves.png",
+        "price":250,
+        "category":"equipment"
+    },
+    {
+        "id":"5",
+        "name":"Squeezer Squirtle",
+        "image":"./assets/images/products/squeezer-squirtle.png",
+        "price":79.99,
+        "category":"equipment"
+    },
+    {
+        "id":"6",
+        "name":"Dragon Born Helmet",
+        "image":"./assets/images/products/dragon-born-helmet.png",
+        "price":600,
+        "category":"equipment"
+    }
+  ]
+}

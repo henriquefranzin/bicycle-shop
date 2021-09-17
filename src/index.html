@@ -29,19 +29,19 @@
 
     <main>
       <section class="filters wrapper grid-col-sm-1">
-        <input class="input input--search" type="Buscar produto"
+        <input id="search-field" class="input input--search" type="Buscar produto"
         placeholder="Buscar produto">
 
-        <select class="input input--select" name="categorias" id="category">
-          <option value="categorias">Todas as categorias</option>
-          <option value="bicicletas">Bicicletas</option>
-          <option value="acessorios">Acessórios</option>
+        <select id="category-field"class="input input--select" name="categorias" id="category">
+          <option value="all">Todas as categorias</option>
+          <option value="bike">Bicicletas</option>
+          <option value="equipment">Acessórios</option>
         </select>
 
-        <select class="input input--select" name="preco" id="price">
+        <select id="sort-field"class="input input--select" name="preco" id="price">
           <option value="selecione">Selecione</option>
-          <option value="menor_preco">Menor preço</option>
-          <option value="maior_preco">Maior preço</option>
+          <option value="asc">Menor preço</option>
+          <option value="desc">Maior preço</option>
           <option value="mais_vendidos">Mais vendidos</option>
         </select>
       </section>

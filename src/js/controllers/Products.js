@@ -1,6 +1,7 @@
 import ProductsView from '../views/Products.js';
 import ProductsModel from '../models/Products.js';
 import { getProducts } from '../services/products.js';
+import { setListener } from '../utils/dom.js';
 
 export default class ProductsController {
   constructor() {
@@ -27,11 +28,9 @@ export default class ProductsController {
   }
 
   setListeners() {
-    document.querySelector('#search-field').addEventListener('input', this.handleSearchFilter.bind(this));
-
-    document.querySelector('#category-field').addEventListener('change', this.handleCategoryFilter.bind(this));
-
-    document.querySelector('#sort-field').addEventListener('change', this.handleSort.bind(this));
+    setListener('#search-field', 'input', this.handleSearchFilter.bind(this));
+    setListener('#category-field', 'change', this.handleCategoryFilter.bind(this));
+    setListener('#sort-field', 'change', this.handleSort.bind(this));
   }
 
   handleSearchFilter({target}) {

@@ -96,6 +96,8 @@ body {
 .header__cart {
   width: 4.6rem;
   height: 3rem;
+  content: attr(data-cart-amount);
+  position: relative;
 }
 
 .filters {

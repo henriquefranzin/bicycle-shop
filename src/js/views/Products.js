@@ -1,9 +1,7 @@
+import View from "./View.js";
 import { formatToBRL } from "../utils/currency.js";
 
-export default class ProductsView {
-  constructor(selector) {
-    this.container = document.querySelector(selector);
-  }
+export default class ProductsView extends View {
 
   template(products) {
 
@@ -11,7 +9,7 @@ export default class ProductsView {
       return '<p>Nenhum produto encontrado com o filtro selecionado</p>';
     }
 
-    return products.reduce((accumulator, {name, image, price}) => {
+    return products.reduce((accumulator, {id, name, image, price}) => {
       return `
         ${accumulator}
         <article class="card">
@@ -29,16 +27,12 @@ export default class ProductsView {
                 ${formatToBRL(price)}
               </p>
 
-              <button class="button">
+              <button class="button" data-product-id="${id}">
                 Adicionar ao carrinho
               </button>
             </div>
           </article>
       `;
     }, '');
-  }
-
-  render(data) {
-    this.container.innerHTML = this.template(data);
   }
 }

@@ -1,5 +1,5 @@
 export default class CartModel{
-  products = localStorage.getItem('cart') || [];
+  products = JSON.parse(localStorage.getItem('cart')) || [];
 
   add(productId) {
     const productIndex = this.products.findIndex((item) => item.id === productId);
@@ -17,10 +17,9 @@ export default class CartModel{
   }
 
   get amount() {
-    return this.products.reduce(() => {
-
+    return this.products.reduce((accumulator, product) => {
+      return accumulator + product.amount;
     }, 0);
   }
-
-};
+}
 

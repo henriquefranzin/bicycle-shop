@@ -93,13 +93,6 @@ body {
   text-transform: uppercase;
 }
 
-.header__cart {
-  width: 4.6rem;
-  height: 3rem;
-  content: attr(data-cart-amount);
-  position: relative;
-}
-
 .filters {
   display: grid;
   grid-template-columns: 40% 1fr 1fr;
@@ -195,34 +188,128 @@ body {
   color: #827B7B;
 }
 
+.cart {
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+}
 
-.card-item__type {
-  font-family: 'Roboto700';
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  color: #827B7B;
+.cart__button {
+  background-color: transparent;
+  background-image: url("../assets/images/cart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+  color: transparent;
+  height: 3rem;
+  width: 3rem;
+  opacity: 1;
+  outline: none;
+  position: relative;
+  transition: opacity 100ms ease-in;
+}
+
+.cart__button--has-products::before {
+  background-color: #b2afa0;
+  border-radius: 50%;
+  color: #fff;
+  content: attr(data-cart-amount);
+  display: flex;
+  font-size: 0.9rem;
+  align-items: center;
+  line-height: 1;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: -0.75rem;
+  right: -1.125rem;
+}
+
+.cart__button:focus,
+.cart__button:hover {
+  opacity: 0.7;
+}
+
+.cart__button::selection {
+  color: transparent;
+}
+
+.table th {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.card-item__columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 2rem;
-  padding-bottom: 3.5rem;
-  gap: 1rem;
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.card-item__name {
+.table th,
+.table td {
+  padding: 0.5rem 0;
+}
+
+.mh-1 {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.ls-none {
+  list-style: none;
+}
+
+.fs-sm {
+  font-size: 0.75rem;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.flex-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover, .button:focus {
+  opacity: 0.7;
+}
+
+.button--transparent {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.text {
   font-family: 'Roboto';
   font-size: 1.6rem;
-  line-height: 1.8rem;
   color: #827B7B;
 }
-
-.card-item__button {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-}
-
-

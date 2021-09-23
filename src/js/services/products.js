@@ -10,4 +10,14 @@ const getProducts = async (filters) => {
   return response.json();
 }
 
-export { getProducts };
+const getProduct = async (id) => {
+  const response = await fetch(`${API_BASE_URL}products/${id}`,{
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
+
+  return response.json();
+}
+
+export { getProducts, getProduct };
